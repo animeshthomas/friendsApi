@@ -11,10 +11,10 @@ let Schema=Mongoose.Schema;
 
 const courseSchema = new Schema({
 
-    name: String,
-    friendName: String,
-    friendNickName:String,
-    DescribeYourFriend:String,
+    name: {"type":String,"required":true},
+    friendName:  {"type":String,"required":true},
+    friendNickName: {"type":String,"required":true},
+    DescribeYourFriend: {"type":String,"required":true}
 });
 
 var courseModel = Mongoose.model('friends', courseSchema);
