@@ -2,8 +2,10 @@ const Express=require('express');
 var bodyParser = require('body-parser');
 const Mongoose= require('mongoose');
 var request=require('request');
+var cors = require('cors');
 
 var app=new Express();
+app.use(cors())
 
 let Schema=Mongoose.Schema;
 
